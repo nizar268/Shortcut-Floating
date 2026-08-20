@@ -125,14 +125,9 @@ public struct FloatingLauncherView: View {
             ProjectCenterButtonView(
                 project: manager.activeProject,
                 folderCount: folderCount,
-                onOptionCommandClick: {
-                    withAnimation(.easeInOut(duration: 0.20)) {
-                        manager.previousProject()
-                    }
-                },
                 onOptionClick: {
-                    withAnimation(.easeInOut(duration: 0.20)) {
-                        manager.nextProject()
+                    withAnimation(.easeInOut(duration: 0.16)) {
+                        showProjectPopup.toggle()
                     }
                 },
                 onNormalClick: {
@@ -183,16 +178,14 @@ public struct FloatingLauncherView: View {
         guard folders.indices.contains(index) else { return }
         let target = folders[index]
         
-        if manager.preferences.closeAfterLaunch {
-            onDismiss()
+        if inNewTab {
+            manager.launchShortcutInNewTab(target)
+        } else {
+            manager.launchShortcut(target)
         }
         
-        DispatchQueue.main.async {
-            if inNewTab {
-                self.manager.launchShortcutInNewTab(target)
-            } else {
-                self.manager.launchShortcut(target)
-            }
+        if manager.preferences.closeAfterLaunch {
+            onDismiss()
         }
     }
     
@@ -321,7 +314,7 @@ private struct RadialHitTestOverlay: NSViewRepresentable {
         
         override func mouseDown(with event: NSEvent) {
             let loc = convert(event.locationInWindow, from: nil)
-            let isCommand = event.modifierFlags.contains(.command) || NSEvent.modifierFlags.contains(.command)
+            let isCommand = event.modifierFlags.contains(.command)
             if let index = calculateSegmentIndex(at: loc) {
                 onClick?(index, isCommand)
             } else {

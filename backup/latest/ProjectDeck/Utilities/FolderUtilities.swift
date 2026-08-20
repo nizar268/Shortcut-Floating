@@ -54,57 +54,48 @@ public struct FolderUtilities {
         }
     }
     
-    /// Opens the folder in a NEW TAB within the active Finder window (triggered by Control+Command+Click or Command+Click).
+    /// Opens the folder in a NEW TAB within the existing front Finder window (when ⌘ Command is held).
     /// If no Finder window exists, opens as usual.
+    /// Uses Process-based osascript for reliable Automation permission handling.
     @discardableResult
     public static func openInFinderNewTab(url: URL) -> Bool {
         return BookmarkManager.shared.withSecurityScope(for: url) {
             let folderPath = url.path
-            let pathEscaped = folderPath
-                .replacingOccurrences(of: "\\", with: "\\\\")
-                .replacingOccurrences(of: "\"", with: "\\\"")
             
+            // Strategy: Use osascript via Process for better permission handling.
+            // System Events "click menu item" requires Automation permission which
+            // macOS will prompt for on first use when NSAppleEventsUsageDescription is in Info.plist.
             let scriptSource = """
             tell application "Finder"
                 activate
-                set targetFolder to (POSIX file "\(pathEscaped)" as alias)
-                if (count of Finder windows) > 0 then
-                    try
-                        tell application "System Events"
-                            tell process "Finder"
-                                set frontmost to true
-                                click menu item "New Tab" of menu "File" of menu bar 1
-                            end tell
+                set windowCount to count of Finder windows
+                if windowCount > 0 then
+                    tell application "System Events"
+                        tell process "Finder"
+                            click menu item "New Tab" of menu "File" of menu bar 1
                         end tell
-                    on error
-                        try
-                            tell application "System Events"
-                                tell process "Finder"
-                                    set frontmost to true
-                                    keystroke "t" using command down
-                                end tell
-                            end tell
-                        end try
-                    end try
-                    delay 0.1
-                    set target of front Finder window to targetFolder
+                    end tell
+                    delay 0.15
+                    set target of front Finder window to (POSIX file "\(folderPath)" as alias)
                 else
-                    open targetFolder
+                    open (POSIX file "\(folderPath)" as alias)
                 end if
             end tell
             """
             
-            // 1. Try NSAppleScript execution
+            // Try NSAppleScript first (works when Automation permission is already granted)
             if let appleScript = NSAppleScript(source: scriptSource) {
                 var errorInfo: NSDictionary?
                 appleScript.executeAndReturnError(&errorInfo)
                 if errorInfo == nil {
                     return true
                 }
-                NSLog("[ProjectDeck] NSAppleScript tab open error: %@", errorInfo ?? [:])
+                
+                // If NSAppleScript failed, try via Process-based osascript as fallback
+                NSLog("[ProjectDeck] NSAppleScript new-tab failed: %@, trying osascript Process...", errorInfo ?? [:])
             }
             
-            // 2. Fallback: Process-based osascript
+            // Fallback 1: Use Process to call /usr/bin/osascript
             let process = Process()
             process.executableURL = URL(fileURLWithPath: "/usr/bin/osascript")
             process.arguments = ["-e", scriptSource]
@@ -117,11 +108,13 @@ public struct FolderUtilities {
                 if process.terminationStatus == 0 {
                     return true
                 }
+                NSLog("[ProjectDeck] osascript Process new-tab exited with status: %d", process.terminationStatus)
             } catch {
-                NSLog("[ProjectDeck] osascript process fallback error: %@", error.localizedDescription)
+                NSLog("[ProjectDeck] osascript Process new-tab failed: %@", error.localizedDescription)
             }
             
-            // 3. Fallback: Standard Finder open
+            // Fallback 2: Open normally via NSWorkspace
+            NSLog("[ProjectDeck] Falling back to standard Finder open for: %@", folderPath)
             return openInFinder(url: url)
         }
     }

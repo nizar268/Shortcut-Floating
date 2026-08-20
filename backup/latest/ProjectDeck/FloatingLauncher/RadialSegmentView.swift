@@ -128,16 +128,15 @@ public struct RadialSegmentView: View {
         .frame(width: center.x * 2, height: center.y * 2)
         .contentShape(wedgeShape)
         .onTapGesture {
-            let flags = NSEvent.modifierFlags
-            let isNewTabRequested = flags.contains(.command)
-            onSelect(isNewTabRequested)
+            let isCommand = NSEvent.modifierFlags.contains(.command)
+            onSelect(isCommand)
         }
         .contextMenu {
             Button("Open in Finder") {
                 onSelect(false)
             }
             
-            Button("Open in New Tab (⌃⌘ Click)") {
+            Button("Open in New Tab (⌘ Click)") {
                 onSelect(true)
             }
             

@@ -1,0 +1,9 @@
+ProjectDeck Source Backup
+Created At: 2026-08-20 17:28:02
+Status: Ready for restore
+Included Components:
+- Package.swift
+- ProjectDeck/ (All Models, Views, Controllers, Managers, Settings, Resources)
+- scripts/
+- README.md
+- ProjectDeck.xcodeproj (if present)

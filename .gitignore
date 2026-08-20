@@ -1,17 +1,17 @@
-# Xcode & Swift Package Manager
-.build/
-.swiftpm/
-build/
-DerivedData/
-*.xcuserstate
-xcuserdata/
-*.xcscmblueprint
-
-# macOS System Files
+# macOS
 .DS_Store
 .AppleDouble
 .LSOverride
 Icon
 
-# Backups
-backup/
+# Swift Package Manager & Builds
+.build/
+build/
+DerivedData/
+Packages/
+*.xcuserstate
+xcuserdata/
+
+# Artifacts
+*.dSYM/
+*.zip

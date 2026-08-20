@@ -1,0 +1,419 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		AA000001 /* ProjectDeckApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB000001 /* ProjectDeckApp.swift */; };
+		AA000002 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB000002 /* AppDelegate.swift */; };
+		AA000003 /* MenuBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB000003 /* MenuBarController.swift */; };
+		AA000004 /* FolderShortcut.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB000004 /* FolderShortcut.swift */; };
+		AA000005 /* FolderGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB000005 /* FolderGroup.swift */; };
+		AA000006 /* AppPreferences.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB000006 /* AppPreferences.swift */; };
+		AA000007 /* ShortcutManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB000007 /* ShortcutManager.swift */; };
+		AA000008 /* HotkeyManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB000008 /* HotkeyManager.swift */; };
+		AA000009 /* BookmarkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB000009 /* BookmarkManager.swift */; };
+		AA000010 /* LaunchAtLoginManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB000010 /* LaunchAtLoginManager.swift */; };
+		AA000011 /* FloatingPanel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB000011 /* FloatingPanel.swift */; };
+		AA000012 /* FloatingPanelController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB000012 /* FloatingPanelController.swift */; };
+		AA000013 /* FloatingLauncherView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB000013 /* FloatingLauncherView.swift */; };
+		AA000014 /* ShortcutItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB000014 /* ShortcutItemView.swift */; };
+		AA000015 /* ManageShortcutsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB000015 /* ManageShortcutsView.swift */; };
+		AA000016 /* ShortcutEditorSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB000016 /* ShortcutEditorSheet.swift */; };
+		AA000017 /* FolderDropZoneView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB000017 /* FolderDropZoneView.swift */; };
+		AA000018 /* SettingsWindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB000018 /* SettingsWindowController.swift */; };
+		AA000019 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB000019 /* SettingsView.swift */; };
+		AA000020 /* HotkeyRecorderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB000020 /* HotkeyRecorderView.swift */; };
+		AA000021 /* VisualEffectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB000021 /* VisualEffectView.swift */; };
+		AA000022 /* ScreenPositioner.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB000022 /* ScreenPositioner.swift */; };
+		AA000023 /* FolderUtilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB000023 /* FolderUtilities.swift */; };
+		AA000024 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BB000024 /* Assets.xcassets */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		CC000001 /* ProjectDeck.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ProjectDeck.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		BB000001 /* ProjectDeckApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectDeckApp.swift; sourceTree = "<group>"; };
+		BB000002 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		BB000003 /* MenuBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuBarController.swift; sourceTree = "<group>"; };
+		BB000004 /* FolderShortcut.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FolderShortcut.swift; sourceTree = "<group>"; };
+		BB000005 /* FolderGroup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FolderGroup.swift; sourceTree = "<group>"; };
+		BB000006 /* AppPreferences.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppPreferences.swift; sourceTree = "<group>"; };
+		BB000007 /* ShortcutManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShortcutManager.swift; sourceTree = "<group>"; };
+		BB000008 /* HotkeyManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HotkeyManager.swift; sourceTree = "<group>"; };
+		BB000009 /* BookmarkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookmarkManager.swift; sourceTree = "<group>"; };
+		BB000010 /* LaunchAtLoginManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchAtLoginManager.swift; sourceTree = "<group>"; };
+		BB000011 /* FloatingPanel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloatingPanel.swift; sourceTree = "<group>"; };
+		BB000012 /* FloatingPanelController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloatingPanelController.swift; sourceTree = "<group>"; };
+		BB000013 /* FloatingLauncherView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloatingLauncherView.swift; sourceTree = "<group>"; };
+		BB000014 /* ShortcutItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShortcutItemView.swift; sourceTree = "<group>"; };
+		BB000015 /* ManageShortcutsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManageShortcutsView.swift; sourceTree = "<group>"; };
+		BB000016 /* ShortcutEditorSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShortcutEditorSheet.swift; sourceTree = "<group>"; };
+		BB000017 /* FolderDropZoneView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FolderDropZoneView.swift; sourceTree = "<group>"; };
+		BB000018 /* SettingsWindowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsWindowController.swift; sourceTree = "<group>"; };
+		BB000019 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		BB000020 /* HotkeyRecorderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HotkeyRecorderView.swift; sourceTree = "<group>"; };
+		BB000021 /* VisualEffectView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisualEffectView.swift; sourceTree = "<group>"; };
+		BB000022 /* ScreenPositioner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenPositioner.swift; sourceTree = "<group>"; };
+		BB000023 /* FolderUtilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FolderUtilities.swift; sourceTree = "<group>"; };
+		BB000024 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		BB000025 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		DD000001 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		EE000001 = {
+			isa = PBXGroup;
+			children = (
+				EE000002 /* ProjectDeck */,
+				EE000003 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		EE000002 /* ProjectDeck */ = {
+			isa = PBXGroup;
+			children = (
+				EE000004 /* App */,
+				EE000005 /* Models */,
+				EE000006 /* Managers */,
+				EE000007 /* FloatingLauncher */,
+				EE000008 /* Management */,
+				EE000009 /* Settings */,
+				EE000010 /* Utilities */,
+				EE000011 /* Resources */,
+				BB000025 /* Info.plist */,
+			);
+			path = ProjectDeck;
+			sourceTree = "<group>";
+		};
+		EE000003 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				CC000001 /* ProjectDeck.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		EE000004 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				BB000001 /* ProjectDeckApp.swift */,
+				BB000002 /* AppDelegate.swift */,
+				BB000003 /* MenuBarController.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		EE000005 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				BB000004 /* FolderShortcut.swift */,
+				BB000005 /* FolderGroup.swift */,
+				BB000006 /* AppPreferences.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		EE000006 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				BB000007 /* ShortcutManager.swift */,
+				BB000008 /* HotkeyManager.swift */,
+				BB000009 /* BookmarkManager.swift */,
+				BB000010 /* LaunchAtLoginManager.swift */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
+		EE000007 /* FloatingLauncher */ = {
+			isa = PBXGroup;
+			children = (
+				BB000011 /* FloatingPanel.swift */,
+				BB000012 /* FloatingPanelController.swift */,
+				BB000013 /* FloatingLauncherView.swift */,
+				BB000014 /* ShortcutItemView.swift */,
+			);
+			path = FloatingLauncher;
+			sourceTree = "<group>";
+		};
+		EE000008 /* Management */ = {
+			isa = PBXGroup;
+			children = (
+				BB000015 /* ManageShortcutsView.swift */,
+				BB000016 /* ShortcutEditorSheet.swift */,
+				BB000017 /* FolderDropZoneView.swift */,
+			);
+			path = Management;
+			sourceTree = "<group>";
+		};
+		EE000009 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				BB000018 /* SettingsWindowController.swift */,
+				BB000019 /* SettingsView.swift */,
+				BB000020 /* HotkeyRecorderView.swift */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
+		EE000010 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				BB000021 /* VisualEffectView.swift */,
+				BB000022 /* ScreenPositioner.swift */,
+				BB000023 /* FolderUtilities.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		EE000011 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				BB000024 /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		FF000001 /* ProjectDeck */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = GG000001 /* Build configuration list for PBXNativeTarget "ProjectDeck" */;
+			buildPhases = (
+				DD000002 /* Sources */,
+				DD000001 /* Frameworks */,
+				DD000003 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ProjectDeck;
+			productName = ProjectDeck;
+			productReference = CC000001 /* ProjectDeck.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		00000001 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1500;
+				LastUpgradeCheck = 1500;
+				TargetAttributes = {
+					FF000001 = {
+						CreatedOnToolsVersion = 15.0;
+					};
+				};
+			};
+			buildConfigurationList = GG000002 /* Build configuration list for PBXProject "ProjectDeck" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = EE000001;
+			productRefGroup = EE000003 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				FF000001 /* ProjectDeck */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		DD000003 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AA000024 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		DD000002 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AA000001 /* ProjectDeckApp.swift in Sources */,
+				AA000002 /* AppDelegate.swift in Sources */,
+				AA000003 /* MenuBarController.swift in Sources */,
+				AA000004 /* FolderShortcut.swift in Sources */,
+				AA000005 /* FolderGroup.swift in Sources */,
+				AA000006 /* AppPreferences.swift in Sources */,
+				AA000007 /* ShortcutManager.swift in Sources */,
+				AA000008 /* HotkeyManager.swift in Sources */,
+				AA000009 /* BookmarkManager.swift in Sources */,
+				AA000010 /* LaunchAtLoginManager.swift in Sources */,
+				AA000011 /* FloatingPanel.swift in Sources */,
+				AA000012 /* FloatingPanelController.swift in Sources */,
+				AA000013 /* FloatingLauncherView.swift in Sources */,
+				AA000014 /* ShortcutItemView.swift in Sources */,
+				AA000015 /* ManageShortcutsView.swift in Sources */,
+				AA000016 /* ShortcutEditorSheet.swift in Sources */,
+				AA000017 /* FolderDropZoneView.swift in Sources */,
+				AA000018 /* SettingsWindowController.swift in Sources */,
+				AA000019 /* SettingsView.swift in Sources */,
+				AA000020 /* HotkeyRecorderView.swift in Sources */,
+				AA000021 /* VisualEffectView.swift in Sources */,
+				AA000022 /* ScreenPositioner.swift in Sources */,
+				AA000023 /* FolderUtilities.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		HH000001 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_PREVIEWS = YES;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = ProjectDeck/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				MARKETING_VERSION = 1.0.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.nizart.projectdeck;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		HH000002 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_PREVIEWS = YES;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = ProjectDeck/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				MARKETING_VERSION = 1.0.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.nizart.projectdeck;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = "wholemodule";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		HH000003 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_TESTABILITY = YES;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		HH000004 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = "wholemodule";
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		GG000001 /* Build configuration list for PBXNativeTarget "ProjectDeck" */;
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				HH000001 /* Debug */,
+				HH000002 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		GG000002 /* Build configuration list for PBXProject "ProjectDeck" */;
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				HH000003 /* Debug */,
+				HH000004 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+	};
+	rootObject = 00000001 /* Project object */;
+}
